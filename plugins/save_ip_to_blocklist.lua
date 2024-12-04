@@ -1,4 +1,5 @@
-local blocklist_file = "/etc/apache2/modsecurity.d/owasp-crs/plugins/plugin-dos-protection-modsecurity/plugins/blockListIP.txt"
+-- Get the blocklist file path from ModSecurity configuration
+local blocklist_file = m.getvar("tx.blocklist_file")
 
 function main()
     local ip = m.getvar("REMOTE_ADDR")
