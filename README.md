@@ -26,7 +26,7 @@ If you want to use rule 9523990 to block the IP without using ipset and apply bl
 
 ### Blocking with ipset and iptables
 
-If you want to add the offending IP to the ipset blocklist and apply blocking through iptables, we will use rules 9523151 or 9523153. Additionally, disable rule 9523990 as it is not necessary in this case. To set this up, we need the following steps:
+If you want to add the offending IP to the ipset blocklist and apply blocking through iptables, we will use rules 9523150 or 9523151. Additionally, disable rule 9523990 as it is not necessary in this case. To set this up, we need the following steps:
 
 - Create an ipset blocklist to block IPs
 
