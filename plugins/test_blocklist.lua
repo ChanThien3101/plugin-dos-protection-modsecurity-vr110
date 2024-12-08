@@ -41,7 +41,7 @@ for attempt = 1, max_retries do
         break
     else
         print("Attempt " .. attempt .. ": File is locked by another process. Retrying in " .. retry_interval .. " seconds...")
-        os.execute("sleep " .. retry_interval)
+        U.sleep(retry_interval) -- Use POSIX sleep for safer and non-blocking delay
     end
 end
 
@@ -62,7 +62,7 @@ if success then
 
     -- Simulate some processing (optional)
     print("Simulating file processing for 5 seconds...")
-    os.execute("sleep 5")
+    U.sleep(5) -- Use POSIX sleep here as well
 else
     print("Failed to lock the file after " .. max_retries .. " attempts.")
 end
